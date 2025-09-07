@@ -1,0 +1,30 @@
+[project]
+name = "streamlit-persist-session-sample"
+version = "0.1.0"
+description = "Monorepo for Streamlit process management with persistent state"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "packages/persistence",
+    "apps/main",
+    "apps/sample",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true

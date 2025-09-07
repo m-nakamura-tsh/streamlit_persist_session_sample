@@ -1,0 +1,22 @@
+[project]
+name = "persistence"
+version = "0.1.0"
+description = "Persistence layer for Streamlit process management"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/persistence"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
