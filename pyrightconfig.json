@@ -1,0 +1,19 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "reportMissingImports": true,
+  "reportMissingModuleSource": true,
+  "executionEnvironments": [
+    {
+      "root": "apps/main"
+    },
+    {
+      "root": "apps/sample",
+      "extraPaths": ["packages/persistence/src"]
+    },
+    {
+      "root": "packages/persistence",
+      "extraPaths": ["packages/persistence/src"]
+    }
+  ]
+}
