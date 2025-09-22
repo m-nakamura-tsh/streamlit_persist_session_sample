@@ -4,6 +4,11 @@ version = "0.1.0"
 description = "Monorepo for Streamlit process management with persistent state"
 readme = "README.md"
 requires-python = ">=3.9"
+dependencies = [
+    "streamlit>=1.29.0",
+    "pandas>=2.0.0",
+    "persistence>=0.1.0",
+]
 
 [tool.uv]
 dev-dependencies = [
@@ -33,3 +38,6 @@ warn_unused_configs = true
 [tool.pyright]
 venvPath = "."
 venv = ".venv"
+
+[tool.uv.sources]
+persistence = { workspace = true }
